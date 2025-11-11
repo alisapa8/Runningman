@@ -1,6 +1,6 @@
 # Alisam
 
-##[Runningman]
+*[Runningman]
 
 **Classification:** [Interactive Racing Video Game]
 
