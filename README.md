@@ -9,3 +9,5 @@
 ### Group
 - Alisa Pavlova (@alisapa8 -diagramer)
 - Samuel Maass (@9634718 -prog/outliner)
+
+  ![UI Mockup] (https://github.com/alisapa8/Runningman/blob/main/images/UMLMockdown.png?raw=true)
