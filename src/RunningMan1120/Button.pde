@@ -1,14 +1,9 @@
-//Samuel Maass
+// -------------------------------------------
+// BUTTON CLASS
+// -------------------------------------------
 class Button {
-
-
-  float x, y, w, h;
   String label;
-
-  color baseColor;
-  color hoverColor;
-  color textColor;
-
+  float x, y, w, h;
 
   Button(String label, float x, float y, float w, float h) {
     this.label = label;
@@ -16,42 +11,20 @@ class Button {
     this.y = y;
     this.w = w;
     this.h = h;
-
-
-    this.baseColor = color(50, 100, 200);
-    this.hoverColor = color(80, 130, 230);
-    this.textColor = color(255);
   }
 
-  void draw() {
-    if (isHovering(mouseX, mouseY)) {
-      fill(hoverColor);
-    } else {
-      fill(baseColor);
-    }
+  void display() {
+    fill(#FFDAC6);
+    stroke(0);
+    rect(x, y, w, h, 10);
 
-
-    noStroke();
-    rectMode(CORNER);
-    rect(x, y, w, h, 7);
-
-
-    fill(textColor);
+    fill(0);
     textAlign(CENTER, CENTER);
-    textSize(18);
+    textSize(16);
     text(label, x + w/2, y + h/2);
   }
 
-  boolean isClicked(float mx, float my) {
-
-    return (mx > x && mx < (x + w) &&
-      my > y && my < (y + h));
-  }
-
-
-  private boolean isHovering(float mx, float my) {
-
-    return (mx > x && mx < (x + w) &&
-      my > y && my < (y + h));
+  boolean clicked() {
+    return (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h);
   }
 }
